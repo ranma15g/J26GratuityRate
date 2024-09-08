@@ -23,7 +23,7 @@ public class Main { // open the class block
         // We ask the user to enter the subtotal
         System.out.print("Enter the subtotal: ");
 
-        // The user enters a degree in Celsius
+        // The user enters a subtotal
         double subtotal = input.nextDouble();
 
         // We ask the user to enter the gratuity rate
