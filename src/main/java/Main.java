@@ -14,37 +14,37 @@ Sign here: ___Eric Snyder___
 import java.util.Scanner; // We are importin the Scanner class from java.util 
 
 public class Main { // open the class block
+
+public static void main(String[] args) { // open the main method block
+
+    // Create the scanner object "input" for user input
+    Scanner input = new Scanner(System.in);
+
+    // We ask the user to enter the subtotal
+    System.out.print("Enter the subtotal: ");
+
+    // The user enters a subtotal
+    double subtotal = input.nextDouble();
+
+    // We ask the user to enter the gratuity rate
+    System.out.print("Enter the gratuity rate: ");
+
+    // The user enters the gratuity rate
+    double gratuityRate = input.nextDouble();
+
+    /* Caculate the gratuity of the subtotal
+       Cast it into an integer to truncate the decimal places */
+    int truncatedGratuity = (int) (subtotal * (gratuityRate / 100) * 100);
+
+    // Divide the truncated gratuity by 100.0 to get the desired two decimal places
+    double formattedGratuity = truncatedGratuity / 100.0;
     
-    public static void main(String[] args) { // open the main method block
+    // We calculate the total
+    double total = subtotal + formattedGratuity;
 
-        // Create the scanner object "input" for user input
-        Scanner input = new Scanner(System.in);
+    // We display the gratuity and the total
+    System.out.printf("The gratuity is $%.2f and total is $%.2f\n", formattedGratuity, total);
 
-        // We ask the user to enter the subtotal
-        System.out.print("Enter the subtotal: ");
+} // We close the method block
 
-        // The user enters a subtotal
-        double subtotal = input.nextDouble();
-
-        // We ask the user to enter the gratuity rate
-        System.out.print("Enter the gratuity rate: ");
-
-        // The user enters the gratuity rate
-        double gratuityRate = input.nextDouble();
-
-        /* Caculate the gratuity of the subtotal
-           Cast it into an integer to truncate the decimal places */
-        int truncatedGratuity = (int) (subtotal * (gratuityRate / 100) * 100);
-
-        // Divide the truncated gratuity by 100.0 to get the desired two decimal places
-        double formattedGratuity = truncatedGratuity / 100.0;
-        
-        // We calculate the total
-        double total = subtotal + formattedGratuity;
-
-        // We display the gratuity and the total
-        System.out.println("The gratuity is $" + formattedGratuity + " and total is $" + total);
-
-    } // We close the method block
-    
 } // We close the main block
